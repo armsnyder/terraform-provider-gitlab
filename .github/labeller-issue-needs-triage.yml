@@ -1,0 +1,4 @@
+# Issue Labeller documentation: https://github.com/marketplace/actions/regex-issue-labeler
+
+needs-triage:
+  - '.*'
