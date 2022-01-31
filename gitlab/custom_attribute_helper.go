@@ -14,7 +14,7 @@ type CustomAttributeGetter func(int, string, ...gitlab.RequestOptionFunc) (*gitl
 type CustomAttributeSetter func(int, gitlab.CustomAttribute, ...gitlab.RequestOptionFunc) (*gitlab.CustomAttribute, *gitlab.Response, error)
 type CustomAttributeDeleter func(int, string, ...gitlab.RequestOptionFunc) (*gitlab.Response, error)
 
-type CreateGetter func(*gitlab.Client) CustomAttributeGetter
+type CreateGetter func(namedCli *gitlab.Client) CustomAttributeGetter
 type CreateSetter func(*gitlab.Client) CustomAttributeSetter
 type CreateDeleter func(*gitlab.Client) CustomAttributeDeleter
 
