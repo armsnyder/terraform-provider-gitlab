@@ -1,0 +1,24 @@
+# GitHub Action reference: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions
+#
+# Automation for pull requests that requires "write" access.
+
+name: pr-target
+
+on: [pull_request_target]
+
+permissions:
+  pull-requests: write
+  contents: read
+
+jobs:
+  labels:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/labeler@v3
+        with:
+          configuration-path: .github/labeler-pr-triage.yml
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: codelytv/pr-size-labeler@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

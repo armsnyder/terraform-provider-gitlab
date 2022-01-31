@@ -1,0 +1,6 @@
+# PR Labeller documentation: https://github.com/marketplace/actions/labeler
+
+needs-triage:
+  - '**'    # Match all regular files.
+  - '.*'    # e.g. .gitignore
+  - '.*/**' # e.g. .github/workflows/push.yml

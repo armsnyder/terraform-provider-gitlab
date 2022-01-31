@@ -1,0 +1,36 @@
+# GitHub Action reference: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions
+#
+# Automation for pull requests being opened that requires "write" access.
+
+name: pr-target-opened
+
+on:
+  pull_request_target:
+    types: [opened]
+
+permissions:
+  pull-requests: write
+  contents: read
+
+jobs:
+  labels:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/labeler@v3
+        with:
+          configuration-path: .github/labeler-pr-needs-triage.yml
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+  comment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/first-interaction@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          pr-message: |
+            Welcome @${{github.actor}} :wave:
+            
+            It looks like this is your first Pull Request submission to the [GitLab AWS Provider](https://github.com/${{ github.repository }})! If you haven’t already done so please make sure you have checked out our [CONTRIBUTING.md](https://github.com/${{ github.repository }}/blob/${{ github.event.repository.default_branch }}/CONTRIBUTING.md) guide to make sure your contribution has all the necessary elements in place for a successful approval.
+            
+            Thanks again, and welcome to the community! :smiley:
