@@ -1,0 +1,33 @@
+# GitHub Action reference: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions
+#
+# This workflow synchronizes this GitHub repository's labels from a config file.
+
+name: label-sync
+
+on:
+  # When label config is updated.
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - .github/labels.yml
+  # When a label is updated out-of-band.
+  # Note that this workflow itself will not trigger the "label" event.
+  label: {}
+
+permissions:
+  repository-projects: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      # Label Sync docs: https://github.com/marketplace/actions/label-sync
+      - uses: EndBug/label-sync@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          config-file: .github/labels.yml
+          # This will delete any label created out-of-band.
+          delete-other-labels: true

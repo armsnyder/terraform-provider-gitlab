@@ -17,3 +17,5 @@
 ## Contributing
 
 Check out the [CONTRIBUTING.md](/CONTRIBUTING.md) guide for tips on how to contribute and develop the provider.
+
+Maintainer-specific guidelines are in [MAINTAINERS.md](/MAINTAINERS.md).

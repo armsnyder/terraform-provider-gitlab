@@ -1,0 +1,176 @@
+# Label config file reference: https://github.com/Financial-Times/github-label-sync#label-config-file
+#
+# The labels defined here are synced to the GitHub issue settings.
+# Labels can be renamed by using the "aliases" key. Removed labels are deleted from GitHub.
+
+- name: breaking-change
+  color: '#d93f0b'
+  description: 'A change that requires a major provider release'
+
+- name: bug
+  color: '#f7c6c7'
+  description: ''
+
+- name: compatibility
+  color: '#09592D'
+  description: 'For compatibility issues'
+
+- name: crash
+  color: '#e11d21'
+  description: ''
+
+- name: data-source
+  color: '#8BAA34'
+  description: 'Adds or modifies a data-source'
+
+- name: dependencies
+  color: '#fad8c7'
+  description: ''
+
+- name: do-not-merge
+  color: '#fbca04'
+  description: 'A maintainer has temporarily blocked merging this PR'
+
+- name: documentation
+  color: '#fef2c0'
+  description: ''
+
+- name: duplicate
+  color: '#cccccc'
+  description: ''
+
+- name: DX
+  color: '#612DAE'
+  description: 'Developer Experience, e.g. contributing, readme, makefile, issue / pr template changes'
+
+- name: EE
+  color: '#7b4db1'
+  description: 'Run EE acc tests before merging'
+
+- name: enhancement
+  color: '#d4c5f9'
+  description: ''
+
+- name: github_actions
+  color: '#000000'
+  description: 'Pull requests that update Github_actions code'
+
+- name: go
+  color: '#16e2e2'
+  description: 'Pull requests that update Go code'
+
+- name: 'good first issue'
+  color: '#128A0C'
+  description: ''
+
+- name: hacktoberfest
+  color: '#5319e7'
+  description: ''
+
+- name: hashibot/ignore
+  color: '#000000'
+  description: ''
+
+- name: 'help wanted'
+  color: '#128A0C'
+  description: 'Need help from maintainers'
+
+- name: invalid
+  color: '#e6e6e6'
+  description: ''
+
+- name: merge-conflict
+  color: '#c5def5'
+  description: 'PR cannot be merged due to a merge conflict'
+
+- name: needs-rebase
+  color: '#DB8564'
+  description: 'For PRs which need a rebase'
+
+- name: new-data-source
+  color: '#d4c5f9'
+  description: ''
+
+- name: new-resource
+  color: '#d4c5f9'
+  description: ''
+
+- name: p1
+  color: '#CB6575'
+  description: 'High priority bug, affects basic usability'
+
+- name: p2
+  color: '#ACBF32'
+  description: 'Medium priority bug, occasionally affects usability'
+
+- name: provider
+  color: '#bfd4f2'
+  description: ''
+
+- name: question
+  color: '#cc317c'
+  description: 'Need more information from author'
+
+- name: regression
+  color: '#e11d21'
+  description: ''
+
+- name: resource
+  color: '#07EBF4'
+  description: 'Adds or modifies a resource'
+
+- name: size/L
+  color: '#ffffff'
+  description: ''
+
+- name: size/M
+  color: '#ffffff'
+  description: ''
+
+- name: size/S
+  color: '#ffffff'
+  description: ''
+
+- name: size/XL
+  color: '#ffffff'
+  description: ''
+
+- name: size/XS
+  color: '#ffffff'
+  description: ''
+
+- name: size/XXL
+  color: '#ffffff'
+  description: ''
+
+- name: stale
+  color: '#e11d21'
+  description: ''
+
+- name: technical-debt
+  color: '#1d76db'
+  description: ''
+
+- name: upstream
+  color: '#fad8c7'
+  description: ''
+
+- name: upstream-api-alignment
+  color: '#fbca04'
+  description: 'For issues and PRs which are aligning the provider implementation with the upstream GitLab API spec'
+
+- name: upstream-terraform
+  color: '#cccccc'
+  description: ''
+
+- name: waiting
+  color: '#b2ffe1'
+  description: 'Blocked by another issue'
+
+- name: waiting-response
+  color: '#5319e7'
+  description: ''
+
+- name: wontfix
+  color: '#ffffff'
+  description: ''
