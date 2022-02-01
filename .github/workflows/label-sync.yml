@@ -26,9 +26,6 @@ jobs:
       - uses: actions/checkout@v2
       # Label Sync docs: https://github.com/marketplace/actions/label-sync
       # - uses: EndBug/label-sync@v2
-      - uses: armsnyder/label-sync@872ce19c530acb6ca729e0c65a35c75cf09f0820
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          config-file: .github/labels.yml
-          # This will delete any label created out-of-band.
-          delete-other-labels: true
+      - uses: Shresht7/SynLabels-Action@v1.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
