@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: EndBug/export-label-config@e18edf209c41549c8338d74214ce4dd62a2381f9
+      - uses: EndBug/export-label-config@dd7608994f61774a59e9011a8386ee98976328c9
         with:
           # This is needed if you're dealing with private repos.
           token: ${{ secrets.GITHUB_TOKEN }}
