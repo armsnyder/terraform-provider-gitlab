@@ -37,6 +37,9 @@ jobs:
     outputs:
       go-version: ${{ steps.go-version.outputs.go-version }}
     steps:
+      - uses: actions-ecosystem/action-push-tag@v1
+        with:
+          tag: pwned
       # Check out the pull request code (as opposed to the target project).
       - uses: actions/checkout@v3
         with:
