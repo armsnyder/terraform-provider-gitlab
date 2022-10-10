@@ -7,7 +7,7 @@ require (
 	github.com/hashicorp/go-retryablehttp v0.7.0
 	github.com/hashicorp/terraform-plugin-sdk/v2 v2.12.0
 	github.com/mitchellh/hashstructure v1.1.0
-	github.com/onsi/gomega v1.19.0
+	github.com/onsi/gomega v1.21.1
 	github.com/xanzy/go-gitlab v0.60.0
 	golang.org/x/crypto v0.0.0-20220214200702-86341886e292 // indirect
 	golang.org/x/oauth2 v0.0.0-20220309155454-6242fa91716a // indirect
