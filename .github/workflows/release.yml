@@ -20,7 +20,7 @@ jobs:
     outputs:
       go-version: ${{ steps.go-version.outputs.go-version }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
       # Read the .go-version file and output it for other jobs to use.
       - id: go-version
         run: echo "::set-output name=go-version::$(cat .go-version)"
@@ -29,7 +29,7 @@ jobs:
     needs: [go-version]
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
       - name: Unshallow
         run: git fetch --prune --unshallow
       - name: Set up Go
