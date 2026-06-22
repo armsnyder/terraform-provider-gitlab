@@ -14,7 +14,7 @@ jobs:
     outputs:
       go-version: ${{ steps.go-version.outputs.go-version }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v7
       # Read the .go-version file and output it for other jobs to use.
       - id: go-version
         run: echo "::set-output name=go-version::$(cat .go-version)"
@@ -37,7 +37,7 @@ jobs:
       - uses: actions/setup-go@v2
         with:
           go-version: ${{ needs.go-version.outputs.go-version }}
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v7
       # Cache the Go modules and compiled tools for the specific lint target.
       - uses: actions/cache@v3
         with:
@@ -58,7 +58,7 @@ jobs:
       - uses: actions/setup-go@v2
         with:
           go-version: ${{ needs.go-version.outputs.go-version }}
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v7
       # Cache the Go modules.
       - uses: actions/cache@v3
         with:
